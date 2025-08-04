@@ -1,0 +1,27 @@
+[project]
+name = "cloudwatch-insights-agent"
+version = "0.1.0"
+description = "A Claude-compatible agent that uses tools to query AWS CloudWatch metrics via Python execution."
+authors = [
+  { name = "Your Name", email = "your.email@example.com" }
+]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.9"
+
+dependencies = [
+  "boto3>=1.28.0",
+  "jinja2>=3.1.2",
+  "smolagents>=0.1.0",
+  "litellm>=1.31.0",
+  "mcp"
+]
+
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
